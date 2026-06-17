@@ -9,8 +9,7 @@ def load_quotes(file_path="quotes.txt"):
     return quotes
 
 def get_daily_quote(quotes):
-    day_of_year = int(time.strftime("%j"))
-    index = day_of_year % len(quotes)
+    index = random.randint(0, len(quotes) - 1)
     return quotes[index], index + 1
 
 def push_to_wework(webhook_url, message, msg_type="text"):
