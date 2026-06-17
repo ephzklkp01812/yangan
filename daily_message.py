@@ -55,12 +55,7 @@ def main():
         return
     
     quote, day_index = get_daily_quote(quotes)
-    today = time.strftime("%Y年%m月%d日")
-    
-    message = f"""📅 {today}
-✨ 每日语录 ({day_index}/{len(quotes)})
-
-{quote}"""
+    message = quote
     
     print(f"今日语录:\n{message}")
     
